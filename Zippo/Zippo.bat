@@ -38,7 +38,6 @@ if not exist "%zippath%" (
 set /p "file=Archive: "
 
 rem Remove surrounding quotes if they exist
-REM THANK GOD FOR CHATGPT AGAIN BRUH :SOB: OTHERWISE I WOULDNT KNOW HOW TO PASS ONLY ONE SET OF QUOTATION MARKS
 set "file=%file:"=%"
 
 if not exist "%file%" (
@@ -47,7 +46,6 @@ if not exist "%file%" (
     exit
 )
 
-REM THANK GOD FOR CHATGPT OTHERWISE I COULDNT DO THE WHOLE FOLDER THING
 set "folder_path=Passlists"
 for %%f in ("%folder_path%\*.txt") do (
     for /f "delims=" %%a in ('type "%%f"') do (
